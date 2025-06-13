@@ -1,7 +1,30 @@
+# ============================================
+# CONFIGURACIÓN FLOWDESKPRO INSTALADOR LOCAL
+# ============================================
+# 
+# IMPORTANTE: Modifique TODAS las contraseñas antes de ejecutar
+# Use contraseñas seguras (mínimo 12 caracteres con números y letras)
+#
+# ============================================
+
+# Contraseña para el usuario 'deploy' del sistema
 deploy_password=AKwWM4Qu2GRppJ7
+
+# Contraseña para el usuario root de MySQL
 mysql_root_password=AKwWM4Qu2GRppJ7
+
+# Contraseña para la base de datos de la aplicación
 db_pass=AKwWM4Qu2GRppJ7
+
+# Contraseña para PostgreSQL
 pg_pass=AKwWM4Qu2GRppJ7
+
+# Contraseña para Redis
 redis_pass=AKwWM4Qu2GRppJ7
+
+# Repositorio del proyecto FlowDeskPro (NO MODIFICAR)
 repositorio=https://github.com/basorastudio/Flowdeskpro.git
+
+# IP del servidor Ubuntu (localhost para instalación local)
+# Para acceso remoto, cambiar por la IP real del servidor
 ipservidorubuntu=localhost

@@ -1,45 +1,76 @@
 [![Grupo do WhatsApp](https://img.shields.io/badge/Grupo_Whatsapp-FlowDeskPro-blue)](https://chat.whatsapp.com/Ge1rB20Cp6JA5QbIX4ZulJ) 
 
 ## Instalador para uso em Local (Linux)
-Probado en ubuntu 20 y 22
+Probado en Ubuntu 20 y 22
 
-Editar archivo config y colocar contraseñas de su preferencia e ip de la máquina ubuntu local
+**IMPORTANTE:** Editar archivo `config` y colocar contraseñas de su preferencia e IP de la máquina Ubuntu local
 
 La opción actualizar tomará la última versión del repositorio usado para instalar
 
+---
 
-## EJECUTAR LOS COMANDOS DE ABAJO ##
+## 📋 EJECUTAR LOS COMANDOS EN ORDEN
 
-para evitar errores se recomienda actualizar el sistema y después de actualizar reiniciar para evitar errores
+### 1. Actualizar el sistema (OBLIGATORIO)
+Para evitar errores, se recomienda actualizar el sistema y reiniciar:
 
 ```bash
 apt -y update && apt -y upgrade
 ```
+
+### 2. Reiniciar el sistema
 ```bash
 reboot
 ```
 
-Después de reiniciar continuar con la instalación
+### 3. Después de reiniciar, continuar con la instalación
 
+**3.1** Navegar al directorio root:
 ```bash
 cd /root
 ```
+
+**3.2** Clonar el repositorio:
 ```bash
 git clone https://github.com/basorastudio/instalador-flow-local.git instaladorflowlocal
 ```
-Editar datos con sus datos, con nano para guardar presiona Ctrl + x
+
+**3.3** Editar configuración con sus datos (para guardar: `Ctrl + X`, luego `Y`, luego `Enter`):
 ```bash
 nano ./instaladorflowlocal/config
 ```
+
+**3.4** Dar permisos de ejecución:
 ```bash
-sudo chmod +x ./instaladorflowlocal/flow
+chmod +x ./instaladorflowlocal/flow
 ```
+
+**3.5** Cambiar al directorio del instalador:
 ```bash
 cd ./instaladorflowlocal
 ```
+
+**3.6** Ejecutar el instalador:
 ```bash
-sudo ./flow
+./flow
 ```
+
+> **Nota:** No es necesario usar `sudo` ya que estamos en el directorio `/root`
+
+---
+
+## ⚙️ Configuración Requerida
+
+Antes de ejecutar el instalador, **DEBE** editar el archivo `config` y modificar:
+
+- `deploy_password`: Contraseña para el usuario deploy
+- `mysql_root_password`: Contraseña para MySQL root
+- `db_pass`: Contraseña para la base de datos
+- `pg_pass`: Contraseña para PostgreSQL
+- `redis_pass`: Contraseña para Redis
+- `ipservidorubuntu`: IP de su servidor (por defecto: localhost)
+
+---
 
 ## ¿Problemas de conexión con whatsapp? ##
 
